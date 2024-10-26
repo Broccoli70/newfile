@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Icosahedron with Planes</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+                #loadingScreen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+    </style>
+  <script type="module" crossorigin src="/newfile/assets/index-BiJD0vTx.js"></script>
+</head>
+<body>
+    <div id="loadingScreen">
+        <h1>NEW.FILE</h1>
+        <p id="loadingText">Loading: 0%</p>
+        <script>
+            let loadingProgress = 0;
+            const loadingText = document.getElementById('loadingText');
+
+            function updateLoading() {
+                loadingProgress += 1;
+                loadingText.innerText = `Loading: ${loadingProgress}%`;
+                if (loadingProgress < 100) {
+                    setTimeout(updateLoading, 100);
+                }
+            }
+            updateLoading();
+        </script>
+    </div>
+</body>
+</html>
